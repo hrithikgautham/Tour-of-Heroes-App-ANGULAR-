@@ -1,0 +1,6 @@
+<div *ngIf="selectedHero">
+    Edit Name: <input [(ngModel)]="selectedHero.name"/> 
+</div>
+<div *ngFor="let hero of heroes; index as i" [class.selected]="selectedHero === hero">
+    <h2>Name: <a routerLink="/herodetails/{{hero.id}}">{{ hero.name }}</a></h2>
+</div>
